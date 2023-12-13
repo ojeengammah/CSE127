@@ -1,0 +1,3 @@
+import sys
+if __name__ == "__main__":
+    sys.stdout.buffer.write(b"\x6f\x67\x61\x6d\x6d\x61\x68\x00\x00\x00\x41\x2b")
