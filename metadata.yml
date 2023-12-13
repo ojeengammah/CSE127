@@ -1,12 +1,1 @@
----
-:id: 173605954
-:submitters:
-- :name: Ojeen Gammah
-  :email: ogammah@ucsd.edu
-:created_at: !ruby/object:ActiveSupport::TimeWithZone
-  utc: 2023-04-10 01:56:42.788836000 Z
-  zone: !ruby/object:ActiveSupport::TimeZone
-    name: America/Los_Angeles
-  time: 2023-04-09 18:56:42.788836000 Z
-:status: processed
-:score: 10.0
+
